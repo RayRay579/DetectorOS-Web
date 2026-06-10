@@ -38,3 +38,31 @@ li{
 footer{
   padding:40px;
 }
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.screenshot-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.screenshot-card img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+
+.screenshot-card h3 {
+  color: #d4af37;
+  margin-bottom: 8px;
+}
+
+.screenshot-card p {
+  color: #d7dce5;
+}

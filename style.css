@@ -149,5 +149,9 @@ p {
   header {
     padding: 70px 20px;
   }
+    .screenshot-grid {
+    display: flex;
+    flex-direction: column;
+  }
 }
 ```

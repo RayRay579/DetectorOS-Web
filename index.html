@@ -45,15 +45,16 @@
 
   <a class="button" href="#features">Learn More</a>
 
-  <a
-    class="button"
-    href="https://apps.apple.com/us/app/detectoros/id6772813493"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Download on the App Store
-  </a>
-
+ <a
+  class="button"
+  href="https://apps.apple.com/us/app/detectoros/id6772813493"
+  target="_blank"
+  rel="noopener noreferrer"
+  onclick="trackDownload()"
+>
+  Download on the App Store
+</a>
+onclick="trackDownload()"
   <div style="margin-top:20px;">
     <a class="button" href="getting-started.html">
       Getting Started Guide
@@ -328,7 +329,7 @@
     Download on the App Store
   </a>
 </section>
-
+onclick="trackDownload()"
 <section id="support">
   <h2>Support</h2>
 
@@ -354,6 +355,13 @@
     <a href="terms-of-use.html">Terms of Use</a>
   </p>
 </footer>
-
+<script>
+function trackDownload() {
+  gtag('event', 'app_store_click', {
+    event_category: 'engagement',
+    event_label: 'Download Button'
+  });
+}
+</script>
 </body>
 </html>

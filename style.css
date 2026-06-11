@@ -180,5 +180,45 @@ p {
   color: #d7dce5;
   text-align: left;
 }
+  .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(15, 17, 21, 0.95);
+  border-bottom: 1px solid rgba(212,175,55,0.25);
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-```
+
+.nav-logo {
+  color: #d4af37;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.nav-links a {
+  color: #d7dce5;
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 0.95rem;
+}
+
+.nav-links a: hover {
+  color: #d4af37;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    margin: 0 8px;
+    font-size: 0.85rem;
+  }
+}
+}

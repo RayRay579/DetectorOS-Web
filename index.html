@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,25 +8,51 @@
   <title>DetectorOS</title>
   <meta name="description" content="Field Intelligence for Modern Treasure Hunters">
   <link rel="stylesheet" href="style.css">
-  <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1YQBR0H7X6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-1YQBR0H7X6');
-</script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1YQBR0H7X6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag(){
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-1YQBR0H7X6');
+
+    function trackDownload() {
+      gtag('event', 'app_store_click', {
+        event_category: 'engagement',
+        event_label: 'Download Button'
+      });
+    }
+
+    function trackGuide() {
+      gtag('event', 'getting_started_click', {
+        event_category: 'engagement',
+        event_label: 'Getting Started Guide'
+      });
+    }
+  </script>
 </head>
 
 <body>
 
 <nav class="navbar">
   <a class="nav-logo" href="index.html">DetectorOS</a>
+
   <div class="nav-links">
     <a href="index.html#features">Features</a>
-    <a href="getting-started.html">Guide</a>
-    <a href="https://apps.apple.com/us/app/detectoros/id6772813493" target="_blank" rel="noopener noreferrer">Download</a>
+    <a href="getting-started.html" onclick="trackGuide()">Guide</a>
+    <a
+      href="https://apps.apple.com/us/app/detectoros/id6772813493"
+      target="_blank"
+      rel="noopener noreferrer"
+      onclick="trackDownload()"
+    >
+      Download
+    </a>
     <a href="privacy-policy.html">Privacy</a>
     <a href="terms-of-use.html">Terms</a>
   </div>
@@ -43,22 +70,27 @@
     and organize every detecting adventure from one powerful platform.
   </p>
 
-  <a class="button" href="#features">Learn More</a>
+  <a class="button" href="#features">
+    Learn More
+  </a>
 
- <a
-  class="button"
-  href="https://apps.apple.com/us/app/detectoros/id6772813493"
-  target="_blank"
-  rel="noopener noreferrer"
-  onclick="trackDownload()"
->
-  Download on the App Store
-</a>
-  <div style="margin-top:20px;">
-    <a class="button" href="getting-started.html">
-      Getting Started Guide
-    </a>
-  </div>
+  <a
+    class="button"
+    href="https://apps.apple.com/us/app/detectoros/id6772813493"
+    target="_blank"
+    rel="noopener noreferrer"
+    onclick="trackDownload()"
+  >
+    Download on the App Store
+  </a>
+
+  <a
+    class="button"
+    href="getting-started.html"
+    onclick="trackGuide()"
+  >
+    Getting Started Guide
+  </a>
 </header>
 
 <section id="video">
@@ -320,15 +352,16 @@
   </p>
 
   <a
-  class="button"
-  href="https://apps.apple.com/us/app/detectoros/id6772813493"
-  target="_blank"
-  rel="noopener noreferrer"
-  onclick="trackDownload()"
->
-  Download on the App Store
-</a>
+    class="button"
+    href="https://apps.apple.com/us/app/detectoros/id6772813493"
+    target="_blank"
+    rel="noopener noreferrer"
+    onclick="trackDownload()"
+  >
+    Download on the App Store
+  </a>
 </section>
+
 <section id="support">
   <h2>Support</h2>
 
@@ -349,18 +382,12 @@
   </p>
 
   <p>
-    <a href="getting-started.html">Getting Started</a> |
+    <a href="getting-started.html" onclick="trackGuide()">Getting Started</a> |
     <a href="privacy-policy.html">Privacy Policy</a> |
     <a href="terms-of-use.html">Terms of Use</a>
   </p>
 </footer>
-<script>
-function trackDownload() {
-  gtag('event', 'app_store_click', {
-    event_category: 'engagement',
-    event_label: 'Download Button'
-  });
-}
-</script>
+
 </body>
 </html>
+```
